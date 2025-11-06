@@ -49,7 +49,7 @@ body {
 }
 
 .logo-img {
-  height: 50px; /* প্রয়োজন অনুযায়ী adjust করো */
+  height: 50px;
   border-radius: 40%;
   width: 80px;
   cursor: pointer;
@@ -115,20 +115,19 @@ body {
   transform: scale(1.1);
   box-shadow: 0 6px 25px rgba(0,0,0,0.4);
 }
+
 /* VIDEO SECTION */
 .video-section {
   text-align: center;
   padding: 80px 20px;
   animation: fadeUp 2s ease;
 }
-
 .video-section h2 {
   color: #ffda79;
   font-size: 2rem;
   margin-bottom: 25px;
   text-shadow: 0 0 10px rgba(255,255,255,0.3);
 }
-
 .fashion-video {
   width: 80%;
   max-width: 400px;
@@ -138,7 +137,6 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
-
 .fashion-video:hover {
   transform: scale(1.03);
   box-shadow: 0 15px 35px rgba(0,0,0,0.5);
@@ -199,7 +197,6 @@ footer {
   transition: 0.3s ease;
   text-shadow: 0 0 8px rgba(24, 119, 242, 0.5);
 }
-
 .social-links a:hover {
   color: #fff;
   text-shadow: 0 0 15px #1877f2, 0 0 30px #1877f2;
@@ -210,4 +207,85 @@ footer {
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+  .header {
+    flex-direction: column;
+    padding: 10px 25px;
+  }
+
+  .navbar {
+    margin-top: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .logo-img {
+    height: 40px;
+    width: 60px;
+  }
+
+  .hero {
+    padding: 130px 15px 80px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-text {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 60px 15px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .video-section {
+    padding: 60px 15px;
+  }
+
+  .fashion-video {
+    width: 95%;
+  }
+
+  .about {
+    padding: 60px 15px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  .hero-text {
+    font-size: 0.8rem;
+  }
+  .btn {
+    font-size: 0.8rem;
+  }
 }
