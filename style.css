@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY BACKGROUND ANIMATION */
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background: linear-gradient(270deg, #f72585, #7209b7, #3a0ca3, #4361ee, #4cc9f0);
+  background-size: 500% 500%;
+  animation: gradientMove 15s ease infinite;
+  overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  animation: slideDown 1.5s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-60px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* LOGO IMAGE */
+.logo-link {
+  display: inline-block;
+}
+
+.logo-img {
+  height: 50px; /* প্রয়োজন অনুযায়ী adjust করো */
+  border-radius: 40%;
+  width: 80px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffda79;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after { width: 100%; }
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 180px 20px 120px;
+  animation: fadeUp 1.8s ease;
+}
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+.hero-text {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-weight: 300;
+}
+.btn {
+  padding: 12px 35px;
+  background: #fff;
+  color: #7209b7;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.4s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+}
+/* VIDEO SECTION */
+.video-section {
+  text-align: center;
+  padding: 80px 20px;
+  animation: fadeUp 2s ease;
+}
+
+.video-section h2 {
+  color: #ffda79;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.fashion-video {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 20px;
+  outline: none;
+  border: 3px solid rgba(255,255,255,0.3);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.fashion-video:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px 20px;
+}
+.card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 30px;
+  width: 280px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  transition: 0.5s;
+}
+.card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.card h3 { color: #ffda79; margin-bottom: 15px; }
+
+/* ABOUT */
+.about {
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+.about h2 {
+  font-size: 2.2rem;
+  color: #ffda79;
+  margin-bottom: 20px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.4);
+}
+.social-links {
+  margin-top: 15px;
+}
+
+/* FACEBOOK ICON GLOW EFFECT */
+.social-links a {
+  color: #1877f2;
+  font-size: 1.7rem;
+  margin: 0 10px;
+  transition: 0.3s ease;
+  text-shadow: 0 0 8px rgba(24, 119, 242, 0.5);
+}
+
+.social-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 15px #1877f2, 0 0 30px #1877f2;
+  transform: scale(1.3);
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
